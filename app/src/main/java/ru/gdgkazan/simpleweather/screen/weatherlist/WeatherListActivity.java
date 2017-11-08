@@ -63,6 +63,7 @@ public class WeatherListActivity extends AppCompatActivity implements CitiesAdap
         mAdapter = new CitiesAdapter(getInitialCities(), this);
         mRecyclerView.setAdapter(mAdapter);
         mLoadingView = LoadingDialog.view(getSupportFragmentManager());
+        cities = getInitialCities();
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setColorSchemeColors(Color.RED, Color.GREEN, Color.BLUE, Color.CYAN);
         load(cities,false);
